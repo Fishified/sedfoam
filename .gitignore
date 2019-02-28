@@ -10,6 +10,7 @@ callgrind*
 linux*
 .gz
 0
+1*
 0.*
 3*
 4*
@@ -21,3 +22,4 @@ linux*
 *new
 *bak
 process*
+/tutorials/threeDScour/constant/polyMesh/*

@@ -42,7 +42,7 @@ expressions
 	}
 	);
         value uniform (1 0 0);
-	expression "vector(inletprofilesedvel(pos().y)*1.3360,inletprofilesedvelv(pos().y),0)";
+	expression "vector(inletprofilesedvel(pos().z)*1.3360,0,inletprofilesedvelv(pos().z))";
 	keepPatches 1;
         }
 
@@ -71,7 +71,7 @@ expressions
 	}
 	);
         value uniform (1 0 0);
-	expression "vector(inletprofilefvel(pos().y)*1.3360,inletprofilefvelv(pos().y),0)";
+	expression "vector(inletprofilefvel(pos().z)*1.3360,0,inletprofilefvelv(pos().z))";
 	keepPatches 1;
         }
 
@@ -89,7 +89,7 @@ expressions
         file "$FOAM_CASE/1d_profil/alpha.xy";
         }
         );
-        expression "inletprofilealpha(pos().y)";
+        expression "inletprofilealpha(pos().z)";
         keepPatches 1;
         }
 
@@ -107,7 +107,7 @@ expressions
         file "$FOAM_CASE/1d_profil/k.xy";
         }
         );
-        expression "inletprofilek(pos().y)";
+        expression "inletprofilek(pos().z)";
         keepPatches 1;
         }
 
@@ -125,7 +125,7 @@ expressions
         file "$FOAM_CASE/1d_profil/epsilon.xy";
         }
         );
-        expression "inletprofilepsilon(pos().y)";
+        expression "inletprofilepsilon(pos().z)";
         keepPatches 1;
         }
         
@@ -148,7 +148,7 @@ expressions
                         file "$FOAM_CASE/1d_profil/epsilon.xy";
                     }
                 );
-                expression "inletprofilepsilon(pos().y)/(0.09*inletprofilek(pos().y))";
+                expression "inletprofilepsilon(pos().z)/(0.09*inletprofilek(pos().z))";
 		keepPatches 1;		
 	}
  );

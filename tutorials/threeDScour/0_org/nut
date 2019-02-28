@@ -55,7 +55,8 @@ boundaryField
     }
     frontAndBackPlanes
     {
-        type            empty;
+        type            calculated;
+        value           uniform 0; 
     }
 }
 
